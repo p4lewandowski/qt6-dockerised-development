@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run App",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/qt6-dockerised-development",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "visualizerFile": "/home/user/.vscode-server/data/User/workspaceStorage/ece875aa1d519bca04a1cae0910c53bb-1/tonka3000.qtvsctools/qt.natvis.xml",
+      "preLaunchTask": "CMakeBuild"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Qt6 App",
+    "image": "stateoftheartio/qt6:6.6-gcc-aqt",
+    "forwardPorts": [
+        8080
+    ],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "AndreOneti.qml-formatter",
+                "cheshirekow.cmake-format",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake",
+                "esbenp.prettier-vscode",
+                "felgo.felgo",
+                "jeff-hykin.better-cpp-syntax",
+                "ms-azuretools.vscode-docker",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-vscode-remote.remote-containers",
+                "ms-vscode-remote.remote-ssh",
+                "ms-vscode-remote.remote-ssh-edit",
+                "ms-vscode-remote.remote-wsl",
+                "ms-vscode-remote.vscode-remote-extensionpack",
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.cpptools-themes",
+                "ms-vscode.remote-explorer",
+                "ms-vscode.remote-server",
+                "redhat.vscode-yaml",
+                "tonka3000.qtvsctools"
+            ]
+        }
+    },
+    "runArgs": [
+        "-e",
+        "DISPLAY=${localEnv:DISPLAY}",
+        "-v",
+        "/tmp/.X11-unix:/tmp/.X11-unix"
+    ],
+    "postCreateCommand": "sudo apt update && sudo apt install -y libgl-dev libvulkan-dev gdb xorg xauth",
+    "containerEnv": {
+        "QT_X11_NO_MITSHM": "1"
+    }
+}
